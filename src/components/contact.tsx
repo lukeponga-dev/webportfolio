@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-muted/40">
+    <section id="contact" className="bg-card">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold font-headline mb-2">Get In Touch</h2>

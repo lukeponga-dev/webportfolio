@@ -36,7 +36,7 @@ export function AIRecommendation() {
 
   return (
     <section id="ai-recommendation" className="container">
-      <Card className="text-center bg-gradient-to-br from-card/50 via-background to-background">
+      <Card className="text-center bg-card">
         <CardHeader className="p-6">
           <div className="flex justify-center mb-4">
             <Sparkles className="w-10 h-10 text-primary" />
