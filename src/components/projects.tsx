@@ -10,8 +10,8 @@ const projects = [
     title: "New Zealand Website",
     description: "A responsive site showcasing NZ's culture and tourism with interactive elements.",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
-    imageUrl: "https://picsum.photos/600/400",
-    imageHint: "cathedral cove",
+    imageUrl: "/img/project-nzsite.jpg",
+    imageHint: "new zealand",
     liveUrl: "https://newzealand-info.netlify.app",
   },
   {
@@ -58,7 +58,8 @@ export function Projects() {
                   <Image
                     src={project.imageUrl}
                     alt={`Screenshot of ${project.title}`}
-                    fill
+                    width={600}
+                    height={400}
                     className="object-cover"
                     data-ai-hint={project.imageHint}
                   />
