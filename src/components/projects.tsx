@@ -7,6 +7,15 @@ import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Assisgnment in web development and disign - NEW ZEALAND WEBSITE",
+    description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
+    tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
+    imageUrl: "/img/project-nz.jpg",
+    imageHint: "new zealand landscape",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
     title: "AI Chat interface App",
     description: "An intuitive chat interface powered by AI, enabling seamless and intelligent conversations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
@@ -99,7 +108,7 @@ export function Projects() {
                     </Link>
                   </Button>
               </CardFooter>
-            </Card>
+            </card>
           ))}
         </div>
       </div>
