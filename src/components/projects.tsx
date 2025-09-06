@@ -12,7 +12,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
     imageUrl: "https://picsum.photos/seed/ai-chat/600/400",
     imageHint: "ai chat",
-    liveUrl: "#",
+    liveUrl: "https://openaiinterface.netlify.app/",
     githubUrl: "#",
   },
   {
