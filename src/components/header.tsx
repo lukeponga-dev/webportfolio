@@ -7,7 +7,9 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetClose
+  SheetClose,
+  SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 
 const navLinks = [
@@ -55,6 +57,8 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
               <nav className="grid gap-6 text-lg font-medium mt-16">
                  {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
