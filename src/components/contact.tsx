@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Send, Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -43,7 +43,16 @@ export function Contact() {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold font-headline mb-2">Get In Touch</h2>
           <p className="text-foreground/80 mb-8">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
+          <div className="flex justify-center items-center gap-2 mb-8 text-lg">
+            <Mail className="w-5 h-5 text-primary" />
+            <a href="mailto:luke.ponga@example.com" className="hover:underline">
+              luke.ponga@example.com
+            </a>
+          </div>
+          <p className="text-foreground/80 mb-8">
+            Feel free to send me a message using the form below.
           </p>
         </div>
         <Form {...form}>
