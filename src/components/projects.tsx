@@ -17,6 +17,15 @@ const projects = [
     githubUrl: "https://github.com/lukeponga-dev/Job-application-tracker",
   },
   {
+    title: "React Tic-Tac-Toe",
+    description: "A JavaScript project where you created a Tic-Tac-Toe game using React.",
+    tech: ["React", "JavaScript"],
+    imageUrl: "https://picsum.photos/seed/react-tictactoe/600/400",
+    imageHint: "tic tac toe game",
+    liveUrl: "#",
+    githubUrl: "https://github.com/lukeponga-dev/react-tictactoe",
+  },
+  {
     title: "New Zealand website assessment",
     description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
