@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileText } from "lucide-react";
 import { Toggle } from "./toggle";
 
 export function Hero() {
@@ -16,6 +16,15 @@ export function Hero() {
         Software Engineer & Creative Technologist
       </p>
       
+      <div className="mt-8 flex gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <Button asChild>
+          <a href="/lukeponga-cv-2025.pdf" target="_blank" rel="noopener noreferrer">
+            <FileText className="mr-2 h-5 w-5" />
+            My Resume
+          </a>
+        </Button>
+      </div>
+
       <Link
         href="#about"
         className="absolute bottom-10 animate-bounce"

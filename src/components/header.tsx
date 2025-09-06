@@ -17,7 +17,6 @@ const navLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
-  { href: "#resume", label: "Resume" },
 ];
 
 export function Header() {
@@ -38,6 +37,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+           <a
+            href="/lukeponga-cv-2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-foreground/70 transition-colors hover:text-foreground"
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            Resume
+          </a>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button variant="ghost" size="icon" asChild>
@@ -71,6 +79,17 @@ export function Header() {
                     </Link>
                   </SheetClose>
                 ))}
+                <SheetClose asChild>
+                  <a
+                    href="/lukeponga-cv-2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-foreground/70 transition-colors hover:text-foreground"
+                  >
+                     <FileText className="mr-2 h-5 w-5" />
+                    Resume
+                  </a>
+                </SheetClose>
                 <SheetClose asChild>
                   <Link href="#contact" className="w-full">
                      <Button className="w-full">Contact Me</Button>
