@@ -50,7 +50,7 @@ const projects = [
     imageUrl: "/img/project-cosmic1.jpg",
     imageHint: "galaxy stars",
     liveUrl: "https://astronomydailypic.netlify.app/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/lukeponga-dev/Astronomy-pic-of-the-day-app",
   },
   {
     title: "Crypto_Stats",
@@ -59,7 +59,7 @@ const projects = [
     imageUrl: "/img/project-cryptostats.jpg",
     imageHint: "crypto dashboard",
     liveUrl: "https://cryptocoinstats.netlify.app/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/lukeponga-dev/CryptoCoins-Price-Stats",
   },
 ];
 
