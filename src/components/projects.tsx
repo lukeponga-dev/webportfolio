@@ -35,10 +35,10 @@ const projects = [
     githubUrl: "#",
   },
   {
-    title: "Atrology Pic of the Day",
+    title: "Astrology Pic of the Day",
     description: "An astronomical web application that fetches and displays high-quality images from the NASA APOD API based on user-selected criteria.",
     tech: ["HTML", "CSS", "JavaScript", "NASA API"],
-    imageUrl: "img/project-cosmicpic.jpg",
+    imageUrl: "/img/project-cosmicpic.jpg",
     imageHint: "galaxy stars",
     liveUrl: "https://astronomydailypic.netlify.app/",
     githubUrl: "#",
