@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Montserrat"', 'sans-serif'],
-        headline: ['"Space Grotesk"', 'sans-serif'],
+        body: ['sans-serif'],
+        headline: ['sans-serif'],
         code: ['monospace'],
       },
       colors: {
