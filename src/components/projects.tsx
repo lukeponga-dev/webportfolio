@@ -6,7 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
-    {
+  {
     title: "Assisgnment in web development and disign - NEW ZEALAND WEBSITE",
     description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
