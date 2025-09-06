@@ -17,9 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['sans-serif'],
-        headline: ['sans-serif'],
-        code: ['monospace'],
+        body: ['Inter', 'sans-serif'],
+        headline: ['Fira Code', 'monospace'],
+        code: ['Fira Code', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
