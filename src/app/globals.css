@@ -22,7 +22,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
  
-    --accent: 179 44% 58%;
+    --accent: 340 82% 52%;
     --accent-foreground: 212 19% 10%;
  
     --destructive: 0 84.2% 60.2%;
@@ -42,8 +42,8 @@
   }
  
   .dark {
-    --background: 212 19% 16%;
-    --foreground: 210 20% 90%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
     --card: 211 32% 21%;
     --card-foreground: 210 20% 90%;
     --popover: 212 19% 10%;
@@ -54,7 +54,7 @@
     --secondary-foreground: 210 20% 98%;
     --muted: 211 32% 22%;
     --muted-foreground: 210 20% 65%;
-    --accent: 179 44% 58%;
+    --accent: 340 82% 52%;
     --accent-foreground: 212 19% 10%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;

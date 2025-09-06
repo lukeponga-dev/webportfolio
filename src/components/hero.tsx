@@ -1,24 +1,21 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
+import { Toggle } from "./toggle";
 
 export function Hero() {
   return (
-    <section id="hero" className="container flex min-h-[calc(100vh-56px)] flex-col items-center justify-center text-center">
-      <p className="font-headline text-lg text-primary animate-fade-in-up">
+    <section id="hero" className="container flex min-h-[calc(100vh-56px)] flex-col items-center justify-center text-center relative">
+      <div className="absolute top-4 right-4">
+        <Toggle />
+      </div>
+      <h1 className="font-headline text-7xl font-bold tracking-tighter sm:text-8xl md:text-9xl lg:text-[10rem] animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
         Luke Ponga
-      </p>
-      <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl mt-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        Software Developer
       </h1>
       <p className="max-w-[700px] text-foreground/80 md:text-xl mt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-        Based in Hamilton, NZ. Specializing in scalable applications, IoT, and AI solutions.
+        Freelance Software Developer
       </p>
-      <Button asChild size="lg" className="mt-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-        <Link href="#projects">
-          View My Work
-        </Link>
-      </Button>
+      
       <Link
         href="#about"
         className="absolute bottom-10 animate-bounce"
