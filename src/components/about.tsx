@@ -9,10 +9,14 @@ export function About() {
       </div>
       <div className="mx-auto mt-8 max-w-3xl space-y-4 text-center text-lg text-foreground/80">
         <p className="leading-relaxed">
-          I'm a passionate software developer with expertise in building scalable applications, IoT systems, and AI solutions. With a strong foundation from my diplomas and hands-on experience, I focus on creating efficient and innovative software.
+          Hi, my name is Luke and I have graduated with a (Level 6) Diploma in software 
+          development, and a (Level 5) Diploma in web development and design at Vision 
+          College, New Zealand.
         </p>
         <p className="leading-relaxed">
-          My interests center around Internet of Things (IoT) ecosystems and Artificial Intelligence. I have recently expanded my expertise through certification in Generative AI and continue to explore new technologies to solve complex problems.
+          I'm currently interested, primarily, in Internet of Things (IoT), Artificial 
+          Intelligence (AI), web3 technologies, mobile computing and data stream 
+          processing. I also enjoy Web design and General software development.
         </p>
       </div>
     </section>
