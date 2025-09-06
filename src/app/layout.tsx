@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
   title: 'Luke Ponga | Software Developer',
@@ -39,6 +40,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
           <Toaster />
         </ThemeProvider>
