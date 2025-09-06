@@ -6,6 +6,7 @@ import { AIRecommendation } from '@/components/ai-recommendation';
 import { Education } from '@/components/education';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
+import { Experience } from '@/components/experience';
 
 export default function Home() {
   return (
@@ -13,10 +14,11 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
-        <Skills />
+        <Experience />
         <Projects />
-        <AIRecommendation />
+        <Skills />
         <Education />
+        <AIRecommendation />
         <Contact />
       </main>
       <Footer />
