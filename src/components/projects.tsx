@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +21,7 @@ const projects = [
     description: "An intuitive chat interface powered by AI, enabling seamless and intelligent conversations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
     imageUrl: "/img/project-aichat.jpg",
-    imageHint: "ai chat",
+    imageHint: "ai chatbot interface",
     liveUrl: "https://openaiinterface.netlify.app/",
     githubUrl: "#",
   },
@@ -99,7 +100,7 @@ export function Projects() {
                     </Link>
                   </Button>
               </CardFooter>
-            </card>
+            </Card>
           ))}
         </div>
       </div>
