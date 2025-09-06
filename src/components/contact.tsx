@@ -47,8 +47,8 @@ export function Contact() {
           </p>
           <div className="flex justify-center items-center gap-2 mb-8 text-lg">
             <Mail className="w-5 h-5 text-primary" />
-            <a href="mailto:luke.ponga@example.com" className="hover:underline">
-              luke.ponga@example.com
+            <a href="mailto:lukeponga9@gmail.com" className="hover:underline">
+              lukeponga9@gmail.com
             </a>
           </div>
           <p className="text-foreground/80 mb-8">
