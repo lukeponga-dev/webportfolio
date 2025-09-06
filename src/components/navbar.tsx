@@ -21,16 +21,11 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
-      if (heroSection) {
-        const heroHeight = heroSection.offsetHeight;
-        setHasScrolled(window.scrollY > heroHeight - 50);
-      } else {
         setHasScrolled(window.scrollY > 50);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -42,6 +37,7 @@ export function Navbar() {
           hasScrolled
             ? 'bg-background/80 backdrop-blur-md border-b'
             : 'bg-transparent',
+          !hasScrolled && 'pt-4'
         )}
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-8">
@@ -49,8 +45,9 @@ export function Navbar() {
             href="/"
             className={cn(
               'font-headline text-2xl font-bold transition-opacity',
-              hasScrolled ? 'opacity-100' : 'opacity-0'
+              hasScrolled ? 'opacity-100' : 'opacity-0 md:opacity-100'
             )}
+            style={{ color: hasScrolled ? 'hsl(var(--foreground))' : 'white' }}
           >
             Luke Ponga
           </Link>
@@ -59,7 +56,7 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="font-semibold text-muted-foreground transition-colors hover:text-primary"
+                className={cn("font-semibold transition-colors hover:text-primary", hasScrolled ? 'text-muted-foreground' : 'text-white/80 hover:text-white')}
               >
                 {item.label}
               </Link>
@@ -71,6 +68,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={cn(!hasScrolled && 'text-white hover:text-white')}
             >
               {isMenuOpen ? <X /> : <Menu />}
             </Button>
