@@ -8,6 +8,15 @@ import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Job Tracker Pro",
+    description: "An application to help users track job applications, manage interviews, and organize their job search process efficiently.",
+    tech: ["React", "JavaScript", "Netlify"],
+    imageUrl: "https://picsum.photos/seed/job-tracker/600/400",
+    imageHint: "job board",
+    liveUrl: "https://job-trackerpro.netlify.app/",
+    githubUrl: "#",
+  },
+  {
     title: "New Zealand website assessment",
     description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
