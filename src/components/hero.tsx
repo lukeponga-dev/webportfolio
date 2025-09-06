@@ -20,13 +20,13 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/1920/1080?grayscale"
+          src="https://picsum.photos/1920/1080"
           alt="Hero background"
           fill
           priority
           style={{ objectFit: 'cover' }}
           className="object-cover"
-          data-ai-hint="monochrome landscape"
+          data-ai-hint="abstract technology"
         />
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
