@@ -6,7 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
-  {
+    {
     title: "Assisgnment in web development and disign - NEW ZEALAND WEBSITE",
     description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
@@ -22,15 +22,6 @@ const projects = [
     imageUrl: "/img/project-aichat.jpg",
     imageHint: "ai chat",
     liveUrl: "https://openaiinterface.netlify.app/",
-    githubUrl: "#",
-  },
-  {
-    title: "Doctors Appointments",
-    description: "A web application for booking and managing doctor appointments, with features for scheduling, user authentication, and profile management.",
-    tech: ["C#", "ASP.NET", "SQL Server"],
-    imageUrl: "https://picsum.photos/seed/doctor-appointment/600/400",
-    imageHint: "medical schedule",
-    liveUrl: "#",
     githubUrl: "#",
   },
   {
