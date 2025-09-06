@@ -8,7 +8,7 @@ import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Assisgnment in web development and disign - NEW ZEALAND WEBSITE",
+    title: "New Zealand website assessment",
     description: "A comprehensive tourism website highlighting New Zealand's unique culture and attractions. Features interactive elements and responsive design to provide an engaging experience across all devices",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
     imageUrl: "/img/project-nz.jpg",
@@ -47,9 +47,9 @@ const projects = [
     title: "Crypto_Stats",
     description: "A cryptocurrency dashboard that displays live market data, charts, and news for various cryptocurrencies using real-time APIs.",
     tech: ["React", "Chart.js", "Crypto API"],
-    imageUrl: "https://picsum.photos/seed/crypto-stats/600/400",
+    imageUrl: "/img/project-cryptostats.jpg",
     imageHint: "crypto dashboard",
-    liveUrl: "#",
+    liveUrl: "https://cryptocoinstats.netlify.app/",
     githubUrl: "#",
   },
 ];
