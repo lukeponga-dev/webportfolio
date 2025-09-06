@@ -3,24 +3,53 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "New Zealand Website",
-    description: "A responsive site showcasing NZ's culture and tourism with interactive elements.",
-    tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
-    imageUrl: "https://picsum.photos/seed/nz-beach/600/400",
-    imageHint: "new zealand beach",
-    liveUrl: "https://newzealand-info.netlify.app",
+    title: "AI Chat interface App",
+    description: "An intuitive chat interface powered by AI, enabling seamless and intelligent conversations.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
+    imageUrl: "https://picsum.photos/seed/ai-chat/600/400",
+    imageHint: "ai chat",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Doctors Appointments",
+    description: "A web application for booking and managing doctor appointments, with features for scheduling, user authentication, and profile management.",
+    tech: ["C#", "ASP.NET", "SQL Server"],
+    imageUrl: "https://picsum.photos/seed/doctor-appointment/600/400",
+    imageHint: "medical schedule",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Vehicle API",
+    description: "A robust RESTful API to manage vehicle information, including endpoints for CRUD operations and vehicle data retrieval.",
+    tech: ["C#", ".NET", "REST API"],
+    imageUrl: "https://picsum.photos/seed/vehicle-api/600/400",
+    imageHint: "car engine",
+    liveUrl: "#",
+    githubUrl: "#",
   },
   {
     title: "CosmicPic",
-    description: "An engaging web application for exploring fascinating cosmic imagery.",
-    tech: ["HTML", "CSS", "JavaScript", "API Integration"],
-    imageUrl: "/img/project-cosmic.jpg",
-    imageHint: "cosmic imagery",
-    liveUrl: "https://astronomydailypic.netlify.app/",
+    description: "An astronomical web application that fetches and displays high-quality images from the NASA APOD API based on user-selected criteria.",
+    tech: ["HTML", "CSS", "JavaScript", "NASA API"],
+    imageUrl: "https://picsum.photos/seed/cosmic-pic/600/400",
+    imageHint: "galaxy stars",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Crypto_Stats",
+    description: "A cryptocurrency dashboard that displays live market data, charts, and news for various cryptocurrencies using real-time APIs.",
+    tech: ["React", "Chart.js", "Crypto API"],
+    imageUrl: "https://picsum.photos/seed/crypto-stats/600/400",
+    imageHint: "crypto dashboard",
+    liveUrl: "#",
+    githubUrl: "#",
   },
 ];
 
@@ -34,7 +63,7 @@ export function Projects() {
             A selection of my work.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col">
               <CardHeader>
@@ -58,10 +87,15 @@ export function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex justify-start gap-4">
                  <Button asChild variant="outline">
                     <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       Live Demo <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="secondary">
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" /> GitHub
                     </Link>
                   </Button>
               </CardFooter>
