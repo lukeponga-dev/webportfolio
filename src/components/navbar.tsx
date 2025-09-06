@@ -1,0 +1,99 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Toggle } from './toggle';
+import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
+import { Menu, X } from 'lucide-react';
+
+const navItems = [
+  { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#education', label: 'Education' },
+  { href: '#contact', label: 'Contact' },
+];
+
+export function Navbar() {
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        setHasScrolled(window.scrollY > heroHeight - 50);
+      } else {
+        setHasScrolled(window.scrollY > 50);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <>
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          hasScrolled
+            ? 'bg-background/80 backdrop-blur-md border-b'
+            : 'bg-transparent',
+        )}
+      >
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-8">
+          <Link
+            href="/"
+            className={cn(
+              'font-headline text-2xl font-bold transition-opacity',
+              hasScrolled ? 'opacity-100' : 'opacity-0'
+            )}
+          >
+            Luke Ponga
+          </Link>
+          <nav className="hidden md:flex items-center gap-6">
+            {navItems.map(item => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="font-semibold text-muted-foreground transition-colors hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Toggle />
+          </nav>
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
+        </div>
+      </header>
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-background/95 pt-20 md:hidden">
+          <nav className="container mx-auto flex flex-col items-center gap-8 py-8">
+            {navItems.map(item => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-2xl font-semibold text-foreground"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Toggle />
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}
