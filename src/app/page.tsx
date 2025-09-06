@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { About } from '@/components/about';
 import { Contact } from '@/components/contact';
 import { Education } from '@/components/education';
@@ -48,7 +48,7 @@ function useInView(ref: React.RefObject<HTMLElement>) {
 
 
 function Section({ children }: { children: React.ReactNode }) {
-  const ref = React.useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref);
 
   return (
