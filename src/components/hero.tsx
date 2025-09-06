@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -6,9 +7,9 @@ import Image from 'next/image';
 
 export function Hero() {
   const scrollToContent = () => {
-    const aboutSection = document.querySelector<HTMLElement>('main > section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+      mainElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -22,11 +23,12 @@ export function Hero() {
           src="https://picsum.photos/1920/1080"
           alt="Hero background"
           fill
+          priority
           style={{ objectFit: 'cover' }}
           className="object-cover"
           data-ai-hint="technology abstract"
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
       <div className="relative z-10 animate-fade-in-up p-4">
         <h1 className="font-headline text-6xl font-bold tracking-tighter md:text-8xl lg:text-9xl">
@@ -39,12 +41,12 @@ export function Hero() {
           I build exceptional and accessible digital experiences.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button size="lg" onClick={scrollToContent} variant="secondary">
+          <Button size="lg" onClick={scrollToContent}>
             View My Work
             <ArrowDown className="ml-2 h-5 w-5" />
           </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="/lukeponga-cv-2025.pdf" download="lukeponga-cv-2025.pdf">
+          <Button size="lg" variant="secondary" asChild>
+            <a href="/lukeponga-cv-2025.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-5 w-5" />
               My Resume
             </a>
@@ -57,7 +59,7 @@ export function Hero() {
           className="animate-bounce"
           aria-label="Scroll down"
         >
-          <ArrowDown className="h-8 w-8 text-white" />
+          <ArrowDown className="h-8 w-8 text-white/80 transition-colors hover:text-white" />
         </button>
       </div>
     </section>
