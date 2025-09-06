@@ -13,7 +13,7 @@ export function Hero() {
         Luke Ponga
       </h1>
       <p className="max-w-[700px] text-foreground/80 md:text-xl mt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-        Freelance Software Developer
+        Software Engineer & Creative Technologist
       </p>
       
       <Link

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Menu, Code2 } from "lucide-react";
+import { Github, Menu, Code2, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -17,6 +17,7 @@ const navLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
+  { href: "#resume", label: "Resume" },
 ];
 
 export function Header() {
