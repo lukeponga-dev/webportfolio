@@ -11,7 +11,7 @@ const projects = [
     description: "A responsive site showcasing NZ's culture and tourism with interactive elements.",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
     imageUrl: "/img/project-nzsite.jpg",
-    imageHint: "new zealand",
+    imageHint: "new zealand landscape",
     liveUrl: "https://newzealand-info.netlify.app",
   },
   {
