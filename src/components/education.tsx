@@ -30,10 +30,10 @@ const certificates = [
 
 export function Education() {
   return (
-    <section id="education" className="container">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold font-headline mb-8">Education & Certifications</h2>
-      </div>
+    <section className="mt-16">
+      <h2 className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+        Education & Certs
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         <div>
           <h3 className="flex items-center gap-3 text-2xl font-bold font-headline mb-6">

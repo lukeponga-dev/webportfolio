@@ -35,7 +35,7 @@ export function AIRecommendation() {
   };
 
   return (
-    <section id="ai-recommendation" className="container">
+    <section className="mt-16">
       <Card className="text-center bg-card">
         <CardHeader className="p-6">
           <div className="flex justify-center mb-4">

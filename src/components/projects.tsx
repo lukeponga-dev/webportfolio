@@ -74,15 +74,11 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="bg-muted/40">
-      <div className="container">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold font-headline">Featured Projects</h2>
-          <p className="mt-2 text-lg text-muted-foreground">
-            A selection of my work.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <section className="mt-16">
+       <h2 className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+        Featured Projects
+      </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col">
               <CardHeader>
@@ -121,7 +117,6 @@ export function Projects() {
             </Card>
           ))}
         </div>
-      </div>
     </section>
   );
 }
