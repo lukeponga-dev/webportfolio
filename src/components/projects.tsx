@@ -36,7 +36,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "API Integration"],
     imageUrl: "/img/project-cosmic.jpg",
     imageHint: "cosmic picture",
-    liveUrl: "#",
+    liveUrl: "https://astronomydailypic.netlify.app/",
   },
 ];
 
