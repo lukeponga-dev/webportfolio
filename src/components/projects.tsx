@@ -10,8 +10,8 @@ const projects = [
     title: "New Zealand Website",
     description: "A responsive site showcasing NZ's culture and tourism with interactive elements.",
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
-    imageUrl: "/img/project-nzsite.jpg",
-    imageHint: "new zealand landscape",
+    imageUrl: "https://picsum.photos/seed/nzbeach/600/400",
+    imageHint: "new zealand beach",
     liveUrl: "https://newzealand-info.netlify.app",
   },
   {
