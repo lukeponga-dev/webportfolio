@@ -83,6 +83,7 @@ export function Navbar() {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(!hasScrolled && 'text-white hover:text-white')}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X /> : <Menu />}
             </Button>

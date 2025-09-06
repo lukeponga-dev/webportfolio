@@ -47,13 +47,14 @@ function useInView(ref: React.RefObject<HTMLElement>) {
 }
 
 
-function Section({ children }: { children: React.ReactNode }) {
+function Section({ children, id }: { children: React.ReactNode, id: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref);
 
   return (
     <div
       ref={ref}
+      id={id}
       className={cn(
         "transition-all duration-700 ease-out",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -84,11 +85,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <main className="container mx-auto px-4 md:px-8">
-        <Section><About /></Section>
-        <Section><Projects /></Section>
-        <Section><Skills /></Section>
-        <Section><Education /></Section>
-        <Section><Contact /></Section>
+        <Section id="about"><About /></Section>
+        <Section id="projects"><Projects /></Section>
+        <Section id="skills"><Skills /></Section>
+        <Section id="education"><Education /></Section>
+        <Section id="contact"><Contact /></Section>
       </main>
       <Footer />
     </div>

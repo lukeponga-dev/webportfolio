@@ -1,9 +1,10 @@
+
 import { AIRecommendation } from './ai-recommendation';
 import { Mail } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 text-center">
+    <section className="py-16 md:py-24 text-center">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
           Get In Touch
