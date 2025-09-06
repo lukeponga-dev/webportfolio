@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Lightbulb } from "lucide-react";
 
 const experiences = [
   {
@@ -15,7 +15,7 @@ export function Experience() {
     <section id="experience" className="container">
       <div className="text-center">
         <h2 className="text-3xl font-bold font-headline mb-8 flex items-center justify-center gap-2">
-          <Briefcase className="w-8 h-8" /> My Experience
+          <Lightbulb className="w-8 h-8" /> Personal Projects
         </h2>
       </div>
       <div className="mx-auto max-w-3xl">
