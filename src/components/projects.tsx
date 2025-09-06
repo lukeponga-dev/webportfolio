@@ -10,7 +10,7 @@ const projects = [
     title: "AI Chat interface App",
     description: "An intuitive chat interface powered by AI, enabling seamless and intelligent conversations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
-    imageUrl: "https://picsum.photos/seed/dark-chat/600/400",
+    imageUrl: "/img/project-aichat.jpg",
     imageHint: "ai chat",
     liveUrl: "https://openaiinterface.netlify.app/",
     githubUrl: "#",
