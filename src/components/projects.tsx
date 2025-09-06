@@ -12,7 +12,7 @@ const projects = [
     tech: ["HTML/CSS", "JavaScript", "Bootstrap"],
     imageUrl: "https://picsum.photos/600/400",
     imageHint: "new zealand landscape",
-    liveUrl: "#",
+    liveUrl: "https://newzealand-info.netlify.app",
   },
   {
     title: "Doctors Appointments",
@@ -75,7 +75,7 @@ export function Projects() {
               </CardContent>
               <CardFooter>
                  <Button asChild variant="outline">
-                    <Link href={project.liveUrl}>
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       Live Demo <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
