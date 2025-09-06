@@ -40,7 +40,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "NASA API"],
     imageUrl: "https://picsum.photos/seed/cosmic-pic/600/400",
     imageHint: "galaxy stars",
-    liveUrl: "#",
+    liveUrl: "https://astronomydailypic.netlify.app/",
     githubUrl: "#",
   },
   {
