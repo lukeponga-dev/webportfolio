@@ -21,10 +21,16 @@ export function About() {
         </div>
         <div className="md:col-span-2 text-lg text-center md:text-left space-y-6 text-muted-foreground">
           <p>
-            Driven by a passion for building robust and efficient backend systems, I am a software developer who thrives on solving complex technical challenges. My journey has taken me from web development fundamentals to specializing in .NET, SQL, and cloud platforms like Azure.
+            My background spans backend systems, secure configurations, and modern web development using technologies like .NET, SQL, Azure, React Native, and Tailwind CSS.
           </p>
           <p>
-            Whether it's architecting scalable APIs, optimizing database performance, or automating workflows, I find immense satisfaction in creating solutions that are both powerful and reliable. I also have a keen interest in IoT and enjoy volunteering my tech skills for community projects.
+            I thrive on solving real-world problems through clean, scalable code and structured workflows. Whether I’m automating developer tasks, optimizing performance, or troubleshooting complex environments like Xamarin and Visual Studio, I approach every challenge with clarity, precision, and curiosity.
+          </p>
+          <p>
+            Beyond the keyboard, I’m committed to community service — blending technical skills with volunteer work in retail, hospice, and digital support roles. I believe in learning through doing, and I’m always exploring new ways to contribute meaningfully through both paid and volunteer opportunities.
+          </p>
+          <p className="font-bold text-foreground">
+            Let’s build something that matters.
           </p>
           <div className="flex justify-center md:justify-start items-center gap-4 pt-4">
             <Button variant="outline" size="icon" asChild>
