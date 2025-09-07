@@ -1,6 +1,4 @@
-
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Cpu, BrainCircuit } from "lucide-react";
 
 const developmentSkills = [
@@ -18,17 +16,17 @@ const softSkills = [
 const skillCategories = [
   {
     title: "Development",
-    icon: <Code className="w-7 h-7" />,
+    icon: <Code className="w-8 h-8" />,
     skills: developmentSkills,
   },
   {
     title: "Technical",
-    icon: <Cpu className="w-7 h-7" />,
+    icon: <Cpu className="w-8 h-8" />,
     skills: technicalSkills,
   },
   {
     title: "Soft Skills",
-    icon: <BrainCircuit className="w-7 h-7" />,
+    icon: <BrainCircuit className="w-8 h-8" />,
     skills: softSkills,
   },
 ]
@@ -36,24 +34,24 @@ const skillCategories = [
 export function Skills() {
   return (
     <section>
-      <h2 id="skills" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
+      <h2 id="skills" className="text-3xl font-bold font-headline uppercase tracking-wider text-primary mb-12 text-center">
         My Skills
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div className="space-y-12">
         {skillCategories.map(category => (
-          <Card key={category.title} className="bg-card/50">
-            <CardHeader className="flex flex-row items-center gap-4">
-              {category.icon}
-              <CardTitle className="font-headline text-2xl">{category.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map(skill => (
-                  <Badge key={skill} variant="default">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <div key={category.title} className="text-center">
+            <div className="inline-flex items-center justify-center gap-4 mb-6">
+              <span className="text-primary">{category.icon}</span>
+              <h3 className="font-headline text-2xl font-bold">{category.title}</h3>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+              {category.skills.map(skill => (
+                <Badge key={skill} variant="secondary" className="text-sm px-4 py-1">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>
