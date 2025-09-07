@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -33,12 +34,12 @@ const projects = [
     githubUrl: "https://github.com/lukeponga-dev/New-Zealand-Website",
   },
   {
-    title: "Xamarin Mobile App",
-    description: "A cross-platform mobile application developed with C# and Xamarin, demonstrating skills in mobile development and setup troubleshooting.",
-    tech: ["C#", "Xamarin", "Mobile"],
+    title: "Astronomy Picture of the Day",
+    description: "A web app that fetches and displays the NASA Astronomy Picture of the Day using the APOD API, built with basic web technologies.",
+    tech: ["JavaScript", "HTML/CSS", "NASA API"],
     imageUrl: "https://picsum.photos/600/400",
-    imageHint: "mobile app interface",
-    liveUrl: null,
+    imageHint: "galaxy stars",
+    liveUrl: "https://astronomydailypic.netlify.app/apod",
     githubUrl: null,
   },
     {
@@ -48,6 +49,15 @@ const projects = [
     imageUrl: "/img/project-aichat.jpg",
     imageHint: "chatbot conversation bubbles",
     liveUrl: "https://v0-openai-chat-tk.vercel.app/",
+    githubUrl: null,
+  },
+    {
+    title: "Xamarin Mobile App",
+    description: "A cross-platform mobile application developed with C# and Xamarin, demonstrating skills in mobile development and setup troubleshooting.",
+    tech: ["C#", "Xamarin", "Mobile"],
+    imageUrl: "https://picsum.photos/600/400",
+    imageHint: "mobile app interface",
+    liveUrl: null,
     githubUrl: null,
   },
 ];
