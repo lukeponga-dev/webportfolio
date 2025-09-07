@@ -1,10 +1,36 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export function Hero() {
+  const [heroText, setHeroText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  const fullText = "Hi, I'm Luke, glad to see you.";
+
+  useEffect(() => {
+    let i = 0;
+    const typeEffect = () => {
+      if (i < fullText.length) {
+        setHeroText(fullText.substring(0, i + 1));
+        i++;
+        setTimeout(typeEffect, 100);
+      } else {
+        // Blinking cursor at the end
+        const cursorInterval = setInterval(() => {
+          setShowCursor(prev => !prev);
+        }, 500);
+        return () => clearInterval(cursorInterval);
+      }
+    };
+    const timeoutId = setTimeout(typeEffect, 500);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
 
   const scrollToContent = () => {
     const aboutSection = document.getElementById('about');
@@ -31,15 +57,11 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
       </div>
       <div className="relative z-10 p-4 flex flex-col items-center">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold">
-          Luke Ponga
+        <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold min-h-[8rem] md:min-h-[10rem]">
+          {heroText}
+          <span className={showCursor ? 'animate-blink' : 'opacity-0'}>|</span>
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-accent max-w-2xl">
-          Backend & Automation Developer
-        </p>
-        <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl">
-          Building reliable backend systems and streamlined automation solutions with .NET, SQL, and Azure.
-        </p>
+
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button size="lg" onClick={scrollToContent}>
             Explore My Work
