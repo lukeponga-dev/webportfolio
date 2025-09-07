@@ -36,10 +36,10 @@ const skillCategories = [
 export function Skills() {
   return (
     <section>
-      <h2 id="skills" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+      <h2 id="skills" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
         My Skills
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         {skillCategories.map(category => (
           <Card key={category.title} className="bg-card/50">
             <CardHeader className="flex flex-row items-center gap-4">

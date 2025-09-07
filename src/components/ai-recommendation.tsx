@@ -58,7 +58,7 @@ export function AIRecommendation() {
             )}
           </Button>
           {recommendation && (
-            <div className="mt-8 p-6 border rounded-lg bg-background text-left shadow-inner">
+            <div className="mt-8 p-6 border rounded-lg bg-background text-center shadow-inner">
               <p className="text-foreground/90 whitespace-pre-wrap">{recommendation}</p>
             </div>
           )}

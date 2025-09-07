@@ -75,12 +75,12 @@ const projects = [
 export function Projects() {
   return (
     <section>
-       <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+       <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
         Featured Projects
       </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col">
+            <Card key={project.title} className="flex flex-col text-left">
               <CardHeader>
                 <div className="aspect-video relative overflow-hidden rounded-lg mb-4">
                   <Image

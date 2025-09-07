@@ -31,19 +31,19 @@ const certificates = [
 
 export function Education() {
   return (
-    <section className="mt-16">
-      <h2 className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+    <section className="mt-16 text-center">
+      <h2 className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-12">
         Education & Certs
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left">
         <div>
-          <h3 className="flex items-center gap-3 text-2xl font-bold font-headline mb-6">
+          <h3 className="flex items-center justify-center md:justify-start gap-3 text-2xl font-bold font-headline mb-6">
             <GraduationCap className="w-7 h-7 text-primary"/>
             Education
           </h3>
           <div className="space-y-6">
             {education.map((edu, index) => (
-              <div key={index}>
+              <div key={index} className="text-center md:text-left">
                 <h4 className="font-semibold text-lg">{edu.degree}</h4>
                 <p className="text-muted-foreground">{edu.institution}</p>
               </div>
@@ -51,13 +51,13 @@ export function Education() {
           </div>
         </div>
         <div>
-          <h3 className="flex items-center gap-3 text-2xl font-bold font-headline mb-6">
+          <h3 className="flex items-center justify-center md:justify-start gap-3 text-2xl font-bold font-headline mb-6">
             <Award className="w-7 h-7 text-primary" />
             Certificates
           </h3>
           <div className="space-y-6">
             {certificates.map((cert, index) => (
-               <div key={index}>
+               <div key={index} className="text-center md:text-left">
                 <h4 className="font-semibold text-lg">{cert.name}</h4>
                 <p className="text-muted-foreground">{cert.issuer}</p>
               </div>
