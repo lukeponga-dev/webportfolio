@@ -13,9 +13,9 @@ import { Skills } from '@/components/skills';
 import { Loader } from '@/components/loader';
 import { cn } from '@/lib/utils';
 import { AIRecommendation } from '@/components/ai-recommendation';
+import { GithubActivity } from '@/components/github-activity';
 
-// Custom hook to detect if an element is in view
-function useInView(ref: React.RefObject<HTMLElement>) {
+function useInView(ref: React.RefObject<HTMLElement>, options: IntersectionObserverInit = {}) {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
@@ -30,6 +30,7 @@ function useInView(ref: React.RefObject<HTMLElement>) {
       },
       {
         threshold: 0.1,
+        ...options,
       }
     );
 
@@ -42,27 +43,30 @@ function useInView(ref: React.RefObject<HTMLElement>) {
         observer.unobserve(ref.current);
       }
     };
-  }, [ref]);
+  }, [ref, options]);
 
   return inView;
 }
 
 
-function Section({ children, id }: { children: React.ReactNode, id: string }) {
+function Section({ children, id, className }: { children: React.ReactNode, id: string, className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref);
+  const inView = useInView(ref, { threshold: 0.1 });
 
   return (
-    <div
+    <section
       ref={ref}
       id={id}
       className={cn(
-        "transition-all duration-700 ease-out",
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        "transition-all duration-700 ease-in-out",
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
+        className
       )}
     >
-      {children}
-    </div>
+      <div className="container mx-auto px-4 md:px-8">
+        {children}
+      </div>
+    </section>
   );
 }
 
@@ -72,7 +76,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500); // Simulate loading time
+    }, 1000); // Simulate loading time
 
     return () => clearTimeout(timer);
   }, []);
@@ -84,14 +88,15 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
       <Navbar />
-      <Hero />
-      <main className="container mx-auto px-4 md:px-8">
+      <main>
+        <Hero />
         <Section id="about"><About /></Section>
-        <Section id="projects"><Projects /></Section>
         <Section id="skills"><Skills /></Section>
+        <Section id="projects"><Projects /></Section>
         <Section id="education"><Education /></Section>
-        <Section id="contact"><Contact /></Section>
+        <Section id="github"><GithubActivity /></Section>
         <Section id="ai-recommendation"><AIRecommendation /></Section>
+        <Section id="contact"><Contact /></Section>
       </main>
       <Footer />
     </div>

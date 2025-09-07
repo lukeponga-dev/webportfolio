@@ -1,103 +1,57 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, FileText } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 export function Hero() {
-  const [name, setName] = useState('');
-  const [title, setTitle] = useState('');
-  const [isNameComplete, setIsNameComplete] = useState(false);
-  const [isTitleComplete, setIsTitleComplete] = useState(false);
-  
-  const fullName = "Luke Ponga";
-  const fullTitle = "Software Developer";
-
-  useEffect(() => {
-    let i = 0;
-    const typingInterval = setInterval(() => {
-      if (i < fullName.length) {
-        setName(fullName.substring(0, i + 1));
-        i++;
-      } else {
-        setIsNameComplete(true);
-        clearInterval(typingInterval);
-      }
-    }, 120);
-    return () => clearInterval(typingInterval);
-  }, []);
-
-  useEffect(() => {
-    if (isNameComplete) {
-      let i = 0;
-      const typingInterval = setInterval(() => {
-        if (i < fullTitle.length) {
-          setTitle(fullTitle.substring(0, i + 1));
-          i++;
-        } else {
-          setIsTitleComplete(true);
-          clearInterval(typingInterval);
-        }
-      }, 100);
-      return () => clearInterval(typingInterval);
-    }
-  }, [isNameComplete]);
 
   const scrollToContent = () => {
-    const mainElement = document.querySelector('main');
-    if (mainElement) {
-      mainElement.scrollIntoView({ behavior: 'smooth' });
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <section
       id="hero"
-      className="relative flex h-screen flex-col items-center justify-center text-center text-white"
+      className="relative flex h-[calc(100vh-5rem)] min-h-[500px] md:h-screen flex-col items-center justify-center text-center text-white bg-background"
     >
       <div className="absolute inset-0 z-0">
         <Image
           src="https://picsum.photos/1920/1080"
-          alt="Luke Ponga Developer Portfolio"
+          alt="Abstract background"
           fill
           priority
           style={{ objectFit: 'cover' }}
-          className="object-cover"
-          data-ai-hint="developer setup"
+          className="opacity-20"
+          data-ai-hint="abstract geometric background"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
       </div>
-      <div className="relative z-10 p-4">
-        <h1 className="font-headline text-5xl md:text-7xl font-bold min-h-[84px] md:min-h-[112px]">
-          {name}
-          {!isNameComplete && <span className="animate-blink">|</span>}
+      <div className="relative z-10 p-4 flex flex-col items-center">
+        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold">
+          Luke Ponga
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-white/80 min-h-[28px] md:min-h-[32px]">
-          {isNameComplete && title}
-          {isNameComplete && !isTitleComplete && <span className="animate-blink">|</span>}
+        <p className="mt-4 text-xl md:text-2xl text-accent max-w-2xl">
+          Backend & Automation Developer
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{animationDelay: '3s', opacity: 0}}>
+        <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl">
+          Building reliable backend systems and streamlined automation solutions with .NET, SQL, and Azure.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button size="lg" onClick={scrollToContent}>
-            View My Work
+            Explore My Work
             <ArrowDown className="ml-2 h-5 w-5" />
           </Button>
-          <Button size="lg" variant="secondary" asChild>
+          <Button size="lg" variant="outline" asChild>
             <a href="/lukeponga-cv-2025.pdf" target="_blank" rel="noopener noreferrer">
-              <FileText className="mr-2 h-5 w-5" />
-              My Resume
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
             </a>
           </Button>
         </div>
-      </div>
-      <div className="absolute bottom-8 z-10">
-        <button
-          onClick={scrollToContent}
-          className="animate-bounce"
-          aria-label="Scroll down"
-        >
-          <ArrowDown className="h-8 w-8 text-white/80 transition-colors hover:text-white" />
-        </button>
       </div>
     </section>
   );

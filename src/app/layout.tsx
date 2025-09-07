@@ -3,10 +3,23 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Space_Grotesk, PT_Sans } from 'next/font/google';
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-pt-sans',
+});
+
 
 export const metadata: Metadata = {
   title: 'Luke Ponga | Software Developer',
-  description: "Luke Ponga's portfolio showcasing expertise in scalable applications, IoT systems, and AI solutions.",
+  description: "Luke Ponga's portfolio showcasing expertise in backend systems, automation, and modern web development.",
 };
 
 export default function RootLayout({
@@ -17,9 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
         {/* Google tag (gtag.js) */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRE77GLCCH"></Script>
         <Script id="google-analytics">
@@ -32,7 +42,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-body antialiased">
+      <body className={`${spaceGrotesk.variable} ${ptSans.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

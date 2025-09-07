@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Fira Code', 'monospace'],
+        headline: ['var(--font-space-grotesk)', 'monospace'],
+        body: ['var(--font-pt-sans)', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -54,13 +54,6 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -84,16 +77,6 @@ export default {
             height: '0',
           },
         },
-        'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
         'loader-bar': {
           '0%, 100%': {
             transform: 'scaleY(0.5)',
@@ -104,17 +87,11 @@ export default {
             opacity: '1',
           },
         },
-        'blink': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'loader-bar': 'loader-bar 1.2s infinite ease-in-out',
-        'blink': 'blink 0.7s infinite',
       },
     },
   },

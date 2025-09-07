@@ -3,13 +3,15 @@
 import { useState } from "react";
 import { aiPoweredRecommendation } from "@/ai/flows/ai-powered-recommendation";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
-const skills = "C# & .NET Framework, Java & Spring Boot, Python & TensorFlow, JavaScript/TypeScript, Generative AI, IoT System Design, Cloud Infrastructure (AWS), API Development, Database Management, Data Analysis, Problem Solving, Logical Reasoning, Time Management, Project Organization, Detail Oriented";
-const experience = "Passionate software developer with expertise in building scalable applications, IoT systems, and AI solutions. Strong foundation from diplomas and hands-on experience. Interests in Internet of Things (IoT) ecosystems and Artificial Intelligence. Certified in Generative AI.";
-const projects = "New Zealand Website (HTML/CSS, JavaScript, Bootstrap), Doctors Appointments (C#, ASP.NET, SQL Server), Health Clinic MVC (MVC, Entity Framework, C#), CosmicPic (HTML, CSS, JavaScript, API Integration)";
+// Note: This data should ideally be fetched from a single source of truth (e.g., a JSON file or API)
+// to avoid duplication with other components.
+const skills = ".NET, SQL, Azure, C#, Java, Python, JavaScript/TypeScript, React Native, Generative AI, IoT, API Development, Database Management, Automation, System Design, Problem Solving";
+const experience = "Software developer specializing in backend systems with .NET, SQL, and Azure. Experience in architecting scalable APIs, optimizing database performance, and automating workflows. Passionate about IoT and community volunteering.";
+const projects = "Job Application Tracker (React, Netlify), NZ Tourism Website (Bootstrap, JS), Vehicle Management API (.NET), Xamarin Mobile App (C#), AI Chat Interface (Next.js, Genkit)";
 
 export function AIRecommendation() {
   const [recommendation, setRecommendation] = useState("");
@@ -25,8 +27,8 @@ export function AIRecommendation() {
     } catch (error) {
       console.error(error);
       toast({
-        title: "Error",
-        description: "Failed to generate recommendation. Please try again later.",
+        title: "Error Generating Recommendation",
+        description: "The AI model could not be reached. Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -35,35 +37,38 @@ export function AIRecommendation() {
   };
 
   return (
-    <section className="mt-16">
-      <Card className="text-center bg-card">
-        <CardHeader className="p-6">
-          <div className="flex justify-center mb-4">
-            <Sparkles className="w-10 h-10 text-primary" />
-          </div>
-          <CardTitle className="font-headline text-2xl">AI-Powered Recommendation</CardTitle>
-          <CardDescription className="max-w-md mx-auto mt-2">
-            Curious how my skills could fit your team? Let AI suggest a potential role or project collaboration.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="p-6 pt-0">
-          <Button onClick={handleGenerate} disabled={isLoading} size="lg">
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Generating...
-              </>
-            ) : (
-              "Generate Idea"
-            )}
-          </Button>
-          {recommendation && (
-            <div className="mt-8 p-6 border rounded-lg bg-background text-center shadow-inner">
-              <p className="text-foreground/90 whitespace-pre-wrap">{recommendation}</p>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-    </section>
+    <div className="text-center">
+       <h2 className="text-3xl font-bold font-headline mb-4">
+        Need a Skill Set Like Mine?
+      </h2>
+      <p className="max-w-2xl mx-auto mb-8 text-muted-foreground">
+        Let AI analyze my profile and suggest a potential role or project collaboration that would be a great fit.
+      </p>
+
+      <Button onClick={handleGenerate} disabled={isLoading} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+        {isLoading ? (
+          <>
+            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+            Analyzing...
+          </>
+        ) : (
+          <>
+            <Sparkles className="mr-2 h-5 w-5" />
+            Get AI-Powered Suggestion
+          </>
+        )}
+      </Button>
+
+      {recommendation && (
+        <Card className="mt-10 max-w-3xl mx-auto text-left bg-primary/10 border-primary/20">
+            <CardHeader>
+                <CardTitle className="font-headline text-accent">Recommendation</CardTitle>
+            </CardHeader>
+          <CardContent>
+            <p className="text-lg whitespace-pre-wrap">{recommendation}</p>
+          </CardContent>
+        </Card>
+      )}
+    </div>
   );
 }
