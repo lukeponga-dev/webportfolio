@@ -37,14 +37,14 @@ export function Skills() {
       <h2 id="skills" className="text-3xl font-bold font-headline uppercase tracking-wider text-primary mb-12 text-center">
         My Skills
       </h2>
-      <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {skillCategories.map(category => (
           <div key={category.title} className="text-center">
             <div className="inline-flex items-center justify-center gap-4 mb-6">
               <span className="text-primary">{category.icon}</span>
               <h3 className="font-headline text-2xl font-bold">{category.title}</h3>
             </div>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-3">
               {category.skills.map(skill => (
                 <Badge key={skill} variant="secondary" className="text-sm px-4 py-1">
                   {skill}
