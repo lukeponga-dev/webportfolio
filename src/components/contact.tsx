@@ -1,5 +1,4 @@
 
-import { AIRecommendation } from './ai-recommendation';
 import { Mail } from 'lucide-react';
 
 export function Contact() {
@@ -21,8 +20,6 @@ export function Contact() {
             lukeponga9@gmail.com
           </a>
         </div>
-
-        <AIRecommendation />
       </div>
     </section>
   );
