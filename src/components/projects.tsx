@@ -78,9 +78,9 @@ export function Projects() {
        <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
         Featured Projects
       </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="flex flex-wrap justify-center gap-8 mt-8">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col text-left">
+            <Card key={project.title} className="flex flex-col text-left w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)]">
               <CardHeader>
                 <div className="aspect-video relative overflow-hidden rounded-lg mb-4">
                   <Image
