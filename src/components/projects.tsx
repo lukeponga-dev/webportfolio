@@ -74,8 +74,8 @@ const projects = [
 
 export function Projects() {
   return (
-    <section className="mt-16">
-       <h2 className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
+    <section>
+       <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6">
         Featured Projects
       </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -98,7 +98,7 @@ export function Projects() {
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <Badge key={t} variant="secondary">{t}</Badge>
+                    <Badge key={t} variant="default">{t}</Badge>
                   ))}
                 </div>
               </CardContent>
