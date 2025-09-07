@@ -20,7 +20,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/1200/800"
+          src="https://picsum.photos/1920/1080"
           alt="Luke Ponga Developer Portfolio"
           fill
           priority
