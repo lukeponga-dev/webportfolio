@@ -18,7 +18,7 @@ export function Hero() {
       if (i < fullText.length) {
         setHeroText(fullText.substring(0, i + 1));
         i++;
-        setTimeout(typeEffect, 100);
+        setTimeout(typeEffect, 50);
       } else {
         // Blinking cursor at the end
         const cursorInterval = setInterval(() => {
