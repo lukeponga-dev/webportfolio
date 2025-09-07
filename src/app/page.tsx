@@ -91,7 +91,7 @@ export default function Home() {
         <Section id="skills"><Skills /></Section>
         <Section id="education"><Education /></Section>
         <Section id="contact"><Contact /></Section>
-        <AIRecommendation />
+        <Section id="ai-recommendation"><AIRecommendation /></Section>
       </main>
       <Footer />
     </div>
