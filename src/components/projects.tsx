@@ -78,7 +78,7 @@ export function Projects() {
        <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
         Featured Projects
       </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col text-left">
               <CardHeader>
