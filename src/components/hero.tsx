@@ -20,7 +20,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://storage.googleapis.com/project-spark-308115.appspot.com/users/studio-output-user-1718136357499/1720612658825_779.png"
+          src="/img/herobg.jpg"
           alt="Luke Ponga Developer Portfolio"
           fill
           priority
