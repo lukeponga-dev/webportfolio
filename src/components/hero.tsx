@@ -75,6 +75,13 @@ export function Hero() {
           </Button>
         </div>
       </div>
+      <div
+        onClick={scrollToContent}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
+        aria-label="Scroll to next section"
+      >
+        <ArrowDown className="h-8 w-8 text-white animate-bounce" />
+      </div>
     </section>
   );
 }
