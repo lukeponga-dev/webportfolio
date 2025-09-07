@@ -40,7 +40,7 @@ export function Education() {
         <Card className="bg-card">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-2xl font-headline">
-              <GraduationCap className="w-7 h-7 text-accent"/>
+              <GraduationCap className="w-7 h-7 text-primary"/>
               Education
             </CardTitle>
           </CardHeader>
@@ -60,7 +60,7 @@ export function Education() {
         <Card className="bg-card">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-2xl font-headline">
-              <Award className="w-7 h-7 text-accent" />
+              <Award className="w-7 h-7 text-primary" />
               Certifications
             </CardTitle>
           </CardHeader>

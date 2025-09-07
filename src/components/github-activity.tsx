@@ -18,7 +18,7 @@ export function GithubActivity() {
             <Card className="max-w-3xl mx-auto bg-card">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 font-headline text-2xl">
-                        <Github className="w-7 h-7 text-accent" />
+                        <Github className="w-7 h-7 text-primary" />
                         Recent Commits & Contributions
                     </CardTitle>
                 </CardHeader>
@@ -28,7 +28,7 @@ export function GithubActivity() {
                              <li key={activity.id} className="flex items-center gap-4 text-muted-foreground">
                                 <Github className="w-5 h-5 shrink-0" />
                                 <p>
-                                    <a href={`https://github.com/${activity.repo}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent transition-colors">
+                                    <a href={`https://github.com/${activity.repo}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">
                                         {activity.repo}
                                     </a>
                                     <span className="ml-2">{activity.action}</span>

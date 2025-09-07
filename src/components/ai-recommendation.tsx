@@ -45,7 +45,7 @@ export function AIRecommendation() {
         Let AI analyze my profile and suggest a potential role or project collaboration that would be a great fit.
       </p>
 
-      <Button onClick={handleGenerate} disabled={isLoading} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+      <Button onClick={handleGenerate} disabled={isLoading} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
         {isLoading ? (
           <>
             <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -60,9 +60,9 @@ export function AIRecommendation() {
       </Button>
 
       {recommendation && (
-        <Card className="mt-10 max-w-3xl mx-auto text-left bg-primary/10 border-primary/20">
+        <Card className="mt-10 max-w-3xl mx-auto text-left bg-secondary/50">
             <CardHeader>
-                <CardTitle className="font-headline text-accent">Recommendation</CardTitle>
+                <CardTitle className="font-headline text-primary">Recommendation</CardTitle>
             </CardHeader>
           <CardContent>
             <p className="text-lg whitespace-pre-wrap">{recommendation}</p>
