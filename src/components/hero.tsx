@@ -20,26 +20,16 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/1920/1080"
-          alt="Hero background"
+          src="https://storage.googleapis.com/project-spark-308115.appspot.com/users/studio-output-user-1718136357499/1720612658825_779.png"
+          alt="Luke Ponga Developer Portfolio"
           fill
           priority
           style={{ objectFit: 'cover' }}
           className="object-cover"
-          data-ai-hint="abstract technology"
         />
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
-      <div className="relative z-10 animate-fade-in-up p-4">
-        <h1 className="font-headline text-6xl font-bold tracking-tighter md:text-8xl lg:text-9xl">
-          Luke Ponga
-        </h1>
-        <h2 className="mt-4 text-xl font-medium tracking-tight text-white/80 md:text-2xl">
-          Software Engineer & Creative Technologist
-        </h2>
-        <p className="mx-auto mt-6 max-w-xl text-lg text-white/90">
-          I build exceptional and accessible digital experiences.
-        </p>
+      <div className="relative z-10 animate-fade-in-up p-4 mt-auto">
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button size="lg" onClick={scrollToContent}>
             View My Work
