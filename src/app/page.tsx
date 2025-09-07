@@ -12,6 +12,7 @@ import { Projects } from '@/components/projects';
 import { Skills } from '@/components/skills';
 import { Loader } from '@/components/loader';
 import { cn } from '@/lib/utils';
+import { AIRecommendation } from '@/components/ai-recommendation';
 
 // Custom hook to detect if an element is in view
 function useInView(ref: React.RefObject<HTMLElement>) {
@@ -90,6 +91,7 @@ export default function Home() {
         <Section id="skills"><Skills /></Section>
         <Section id="education"><Education /></Section>
         <Section id="contact"><Contact /></Section>
+        <AIRecommendation />
       </main>
       <Footer />
     </div>

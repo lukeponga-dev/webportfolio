@@ -19,7 +19,6 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Fira Code', 'monospace'],
-        code: ['Fira Code', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

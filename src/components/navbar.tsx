@@ -47,7 +47,7 @@ export function Navbar() {
             href="/"
             className={cn(
               'font-headline text-2xl font-bold transition-colors duration-300',
-               hasScrolled ? 'text-foreground' : 'text-white'
+               hasScrolled || isMenuOpen ? 'text-foreground' : 'text-white'
             )}
             onClick={closeMenu}
           >
@@ -82,7 +82,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={cn(!hasScrolled && 'text-white hover:text-white')}
+              className={cn(!hasScrolled && !isMenuOpen && 'text-white hover:text-white')}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X /> : <Menu />}

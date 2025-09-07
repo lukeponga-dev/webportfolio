@@ -75,12 +75,12 @@ const projects = [
 export function Projects() {
   return (
     <section>
-       <h2 id="projects" className="text-2xl font-bold font-headline uppercase tracking-wider text-primary mb-6 text-center">
+       <h2 id="projects" className="text-3xl font-bold font-headline uppercase tracking-wider text-primary mb-12 text-center">
         Featured Projects
       </h2>
-        <div className="flex flex-wrap justify-center gap-8 mt-8">
-          {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col text-left w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <Card key={index} className="flex flex-col text-left bg-primary/10 hover:bg-primary/20 transition-all duration-300">
               <CardHeader>
                 <div className="aspect-video relative overflow-hidden rounded-lg mb-4">
                   <Image
@@ -98,17 +98,17 @@ export function Projects() {
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <Badge key={t} variant="default">{t}</Badge>
+                    <Badge key={t} variant="secondary">{t}</Badge>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex justify-start gap-4">
-                 <Button asChild variant="outline">
+                 <Button asChild>
                     <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       Live Demo <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="secondary">
+                  <Button asChild variant="outline">
                     <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" /> GitHub
                     </Link>

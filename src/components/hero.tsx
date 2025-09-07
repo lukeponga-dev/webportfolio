@@ -20,16 +20,19 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/img/herobg.jpg"
+          src="https://picsum.photos/1200/800"
           alt="Luke Ponga Developer Portfolio"
           fill
           priority
           style={{ objectFit: 'cover' }}
           className="object-cover"
+          data-ai-hint="developer setup"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
-      <div className="relative z-10 animate-fade-in-up p-4 mt-auto">
+      <div className="relative z-10 animate-fade-in-up p-4">
+        <h1 className="font-headline text-5xl md:text-7xl font-bold">Luke Ponga</h1>
+        <p className="mt-4 text-lg md:text-xl text-white/80">Software Developer</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button size="lg" onClick={scrollToContent}>
             View My Work
