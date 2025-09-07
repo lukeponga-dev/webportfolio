@@ -47,7 +47,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Genkit", "AI"],
     imageUrl: "/img/project-aichat.jpg",
     imageHint: "chatbot conversation bubbles",
-    liveUrl: "https://openaiinterface.netlify.app/",
+    liveUrl: "https://v0-openai-chat-tk.vercel.app/",
     githubUrl: null,
   },
 ];
