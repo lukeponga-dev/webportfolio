@@ -10,7 +10,7 @@ const projects = [
     title: "JobTrakr",
     description: "A modern, responsive dashboard to efficiently track job applications. Built with a full-stack Next.js architecture, featuring AI-powered insights from Google AI, and seamless database integration with Supabase.",
     tech: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "Supabase", "Google AI", "Genkit", "Firebase"],
-    imageUrl: "https://picsum.photos/seed/job-dashboard/600/400",
+    imageUrl: "/img/jobtrak.png",
     imageHint: "dashboard kanban",
     liveUrl: "https://jobtrack-dashboard.netlify.app/",
     githubUrl: "https://github.com/lukeponga-dev/jobtrak-dashboard-nextjs",
