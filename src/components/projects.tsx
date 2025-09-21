@@ -16,6 +16,15 @@ const projects = [
     githubUrl: "https://github.com/lukeponga-dev/jobtrak-dashboard-nextjs",
   },
   {
+    title: "CryptoStats",
+    description: "A web application for tracking cryptocurrency statistics. Further details about the project are coming soon.",
+    tech: ["React", "JavaScript", "API"],
+    imageUrl: "/img/project-cryptostats.jpg",
+    imageHint: "cryptocurrency dashboard",
+    liveUrl: null,
+    githubUrl: null,
+  },
+  {
     title: "Vehicle Management API",
     description: "A robust RESTful API for managing vehicle information, featuring comprehensive CRUD operations and built with a .NET backend.",
     tech: ["C#", ".NET", "REST API", "SQL"],
