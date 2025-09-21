@@ -7,22 +7,13 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Job Application Tracker",
-    description: "A web app to track job applications, manage interviews, and organize the job search process, built with React and deployed on Netlify.",
-    tech: ["React", "JavaScript", "Netlify", "Automation"],
-    imageUrl: "https://picsum.photos/seed/job-tracker/600/400",
-    imageHint: "dashboard kanban",
-    liveUrl: "https://job-trackerpro.netlify.app/",
-    githubUrl: "https://github.com/lukeponga-dev/Job-application-tracker",
-  },
-  {
     title: "JobTrakr",
-    description: "A dashboard to track job applications, built with Next.js.",
-    tech: ["Next.js"],
-    imageUrl: "https://picsum.photos/seed/analytics-dashboard/600/400",
-    imageHint: "dashboard analytics",
+    description: "A modern, responsive dashboard to efficiently track job applications. Built with a full-stack Next.js architecture, featuring AI-powered insights from Google AI, and seamless database integration with Supabase.",
+    tech: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "Supabase", "Google AI", "Genkit", "Firebase"],
+    imageUrl: "https://picsum.photos/seed/job-dashboard/600/400",
+    imageHint: "dashboard kanban",
     liveUrl: "https://jobtrack-dashboard.netlify.app/",
-    githubUrl: null,
+    githubUrl: "https://github.com/lukeponga-dev/jobtrak-dashboard-nextjs",
   },
   {
     title: "Vehicle Management API",
