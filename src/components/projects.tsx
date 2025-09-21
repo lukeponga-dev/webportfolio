@@ -28,7 +28,7 @@ const projects = [
     title: "NZ Tourism Website",
     description: "A comprehensive tourism website for New Zealand, featuring an interactive and responsive design to showcase culture and attractions.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    imageUrl: "https://picsum.photos/seed/new-zealand/600/400",
+    imageUrl: "/img/project-nz.jpg",
     imageHint: "new zealand",
     liveUrl: "https://lukeponga-dev.github.io/New-Zealand-Website/",
     githubUrl: "https://github.com/lukeponga-dev/New-Zealand-Website",
