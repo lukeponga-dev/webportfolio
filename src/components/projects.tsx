@@ -37,9 +37,9 @@ const projects = [
     title: "Astronomy Picture of the Day",
     description: "A web app that fetches and displays the NASA Astronomy Picture of the Day using the APOD API, built with basic web technologies.",
     tech: ["JavaScript", "HTML/CSS", "NASA API"],
-    imageUrl: "https://picsum.photos/seed/galaxy/600/400",
+    imageUrl: "/img/project-cosmic1.jpg",
     imageHint: "galaxy stars",
-    liveUrl: "https://astronomydailypic.netlify.app/apod",
+    liveUrl: "https://astronomydailypic.netlify.app",
     githubUrl: null,
   },
     {
